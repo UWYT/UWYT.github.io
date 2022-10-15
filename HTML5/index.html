@@ -1,0 +1,75 @@
+<head>
+    <title>Site-X: Containment Facility</title>
+    <link rel="stylesheet" href="CSS/stele.css">
+    <link type="text/plain" rel="Victor Company" href="https://discord.gg/G56N5D7ekx" />
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<nav class="navbar">
+    <span clss="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+            <svg width="30" height="30">
+                <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+            </svg>
+        </a>
+    </span>
+
+    <ul class="navbar-nav">
+        <li><a href="about.html">About Us!</a></li>
+        <li><a href="error.html">News!</a></li>
+        <li><a href="updates.html">Updates!</a></li>
+        <li><a href="contact.html">Contact Us!</a></li>
+    </ul>
+</nav>
+
+<div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="CloseSlideMenu()">&times;</a>
+    <a href="about.html">About Us!</a>
+    <a href="error.html">News!</a>
+    <a href="updates.html">Updates!</a>
+    <a href="contact.html">Contact Us!</a>
+</div>
+<script>
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('BODY').style.marginLeft = '250px';
+    }
+
+    function CloseSlideMenu(){
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('BODY').style.marginLeft = '0';
+    }
+</script>
+<body>
+    <h1>Red Insurgency</h1>
+    <h3>About the our faction</h3>
+    <p>The Red Insurgency is a Chaos alike faction, it has currently 133 members.</p>
+    <p>It is currently aspiring to gain more members, do more events and be more active amongst the community</p>
+    <h3>Useful links!</h3>
+    <a href="https://discord.gg/fxEVEMqx8V" target="_blank">Our discord!</a>
+    <br>
+    <br>
+    <footer>&copy; 2022<script>new Date().getFullYear()>2012&&document.write(" - "+new Date().getFullYear());</script> Red Insurgency. Thanks to Netlify.</footer> 
+    <h4>Background Colors</h4>
+</body>
+<button class="colorButton">Red</button>
+<button class="colorButton">Green</button>
+<button class="colorButton">Orange</button>
+<button class="colorButton">Yellow</button>
+<button class="colorButton">Pink</button>
+<button class="colorButton">Purple</button>
+<button class="colorButton">Brown</button>
+<button class="colorButton">Gray</button>
+<button class="colorButton">Cyan</button>
+
+<script>
+    const colorButtons = [...document.querySelectorAll('.colorButton')];
+    document.addEventListener('click', e => {
+        if (!colorButtons.includes(e.target)) return;
+        document.body.style.background = e.target.textContent;
+    });
+    </script>   
+</div>

@@ -1,0 +1,82 @@
+<head>
+    <title>About Us!</title>
+    <link rel="stylesheet" href="CSS/about.css">
+</head>
+<nav class="navbar">
+    <span clss="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+            <svg width="30" height="30">
+                <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+            </svg>
+        </a>
+    </span>
+
+    <ul class="navbar-nav">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="error.html">News!</a></li>
+        <li><a href="updates.html">Updates!</a></li>
+        <li><a href="contact.html">Contact Us!</a></li>
+    </ul>
+</nav>
+
+<div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="CloseSlideMenu()">&times;</a>
+    <a href="index.html">Main</a>
+    <a href="error.html">News!</a>
+    <a href="updates.html">Updates!</a>
+    <a href="contact.html">Contact Us!</a>
+</div>
+<script>
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('BODY').style.marginLeft = '250px';
+    }
+
+    function CloseSlideMenu(){
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('BODY').style.marginLeft = '0';
+    }
+</script>
+
+<body>
+    <h1>Abous Us!</h1>
+        <p>The Red Insurgency is a Group of Interest (GOI) opposing the SCP Foundation (Although it has been seen opposing factions </p>
+        <p>such as the Church of the Broken God, the Chaos Insurgency, and the Serpent's Hand). Information about the Red Insurgency is </p>
+        <p>classified to Level 5 access due to the GOI's intelligence, power, and overall threat. Every SCP it steals and breaches, every</p>
+        <p>casualty it causes, and every raid started collectively makes its attacks a large step back for the entire Foundation. The GOI </p>
+        <p>gains its members through each successful raid, as deviating personnel take it as a chance to escape the Foundation.</p>
+        <br>
+        <br>
+        <p>The Red Insurgency's total member count is [DATA EXPUNGED] as of ██/█/██. One of the greater reasons that this faction is</p>
+        <p>considered deadly is the way they design their raids. The tactics that this GOI uses ensures chaos, even if it is shut down </p>
+        <p>quickly. While waging war with other factions, the Red Insurgency has been seen making great use of a facility's ventilation </p>
+        <p>systems, deploying "juggernauts" (Soldiers in heavy plated armor and miniguns), and using equipment found in past raids. Most </p>
+        <p>successful raids have been ended willingly by the Red Insurgency forcing cutthroat negotiations.
+        </p>
+        <h3>More info</h3>
+    <p>For more information go check our discord featured in the main page.</p>
+    <br>
+    <br>
+    <h4>Background Colors</h4>
+    <button class="colorButton">Blue</button>
+    <button class="colorButton">Red</button>
+    <button class="colorButton">Green</button>
+    <button class="colorButton">Orange</button>
+    <button class="colorButton">Yellow</button>
+    <button class="colorButton">Pink</button>
+    <button class="colorButton">Purple</button>
+    <button class="colorButton">Brown</button>
+    <button class="colorButton">Gray</button>
+    <button class="colorButton">Cyan</button>
+    <button class="colorButton">White</button>
+    
+    <script>
+        const colorButtons = [...document.querySelectorAll('.colorButton')];
+        document.addEventListener('click', e => {
+            if (!colorButtons.includes(e.target)) return;
+            document.body.style.background = e.target.textContent;
+        });
+        </script>   
+</body>
